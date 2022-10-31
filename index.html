@@ -30,17 +30,17 @@
     </div>
     <ul class="page-header-user">
       <li class="page-header-user-item">
-        <a class="page-header-user-search" href="#">
+        <a class="navigation-link page-header-user-search" href="#">
           <span class="visually-hidden">Поиск</span>
         </a>
       </li>
       <li class="page-header-user-item">
-        <a class="page-header-user-fav" href="#">
+        <a class="navigation-link navigation-item page-header-user-fav" href="#">
           <span class="visually-hidden">Избранное</span>
         </a>
       </li>
       <li class="page-header-user-item">
-        <a class="button-apply button brown-button" href="#">Хочу сюда!</a>
+        <a class="navigation-link button-apply button brown-button" href="#">Хочу сюда!</a>
       </li>
     </ul>
   </header>
@@ -116,13 +116,13 @@
 
   <section class="newsletter">
     <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
-    <p class="newsletter-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+    <p class="newsletter-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
     <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-      <label for="newsletter-email">Ваш e-mail</label>
-      <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email"
-             required>
+      <label for="newsletter-email" class="visually-hidden">Ваш e-mail</label>
+      <input class="field-newsletter-email" placeholder="Ваш e-mail" type="email" name="newsletter-email"
+             id="newsletter-email" required>
       <button class="newsletter-button button blue-button" type="submit">
-        <span class="visually-hidden">Подписаться</span>
+        <span>Подписаться</span>
       </button>
     </form>
   </section>
