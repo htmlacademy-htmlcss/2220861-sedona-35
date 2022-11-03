@@ -129,7 +129,10 @@ h2 {
 
 .page-header-user-item .button-apply {
   width: 160px;
-  margin-left: 20px;
+}
+
+.page-header-user-item:nth-last-child(2) {
+  margin-right: 20px;
 }
 
 .page-header-user .page-header-user-search {
@@ -212,7 +215,7 @@ h2 {
 }
 
 .main-banner-welcome {
-  margin: 51px auto auto auto;
+  padding-top: 51px;
 }
 
 .advantages-container {
