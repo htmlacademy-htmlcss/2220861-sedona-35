@@ -15,6 +15,7 @@
         </a>
       </div>
       <nav class="navigation">
+        <h2 class="visually-hidden">Главное меню</h2>
         <ul class="navigation-list">
           <li class="navigation-item">
             <a class="navigation-link" href="index.html">Главная</a>
@@ -30,17 +31,17 @@
     </div>
     <ul class="page-header-user">
       <li class="page-header-user-item">
-        <a class="page-header-user-search" href="#">
+        <a class="navigation-link page-header-user-search" href="#">
           <span class="visually-hidden">Поиск</span>
         </a>
       </li>
       <li class="page-header-user-item">
-        <a class="page-header-user-fav" href="#">
+        <a class="navigation-link navigation-item page-header-user-fav" href="#">
           <span class="visually-hidden">Избранное</span>
         </a>
       </li>
       <li class="page-header-user-item">
-        <a class="button-apply button brown-button" href="#">Хочу сюда!</a>
+        <a class="navigation-link button-apply button brown-button" href="#">Хочу сюда!</a>
       </li>
     </ul>
   </header>
@@ -51,7 +52,7 @@
         <h1 class="catalog-header-title">Гостиницы Седоны</h1>
         <ul class="breadcrumbs">
           <li class="breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html">
+            <a class="breadcrumbs-link home" href="index.html">
               <span class="visually-hidden">Главная</span>
             </a>
           </li>
@@ -152,13 +153,13 @@
           <option value="popular">Сначала популярные</option>
         </select>
         <div class="catalog-results-display-options-buttons">
-          <a class="button button-selected" href="#">
+          <a class="button button-selected display-icons" href="#">
             <span class="visually-hidden">Показать список</span>
           </a>
-          <a class="button" href="#">
+          <a class="button display-preview" href="#">
             <span class="visually-hidden">Показать карточки</span>
           </a>
-          <a class="button" href="#">
+          <a class="button display-list" href="#">
             <span class="visually-hidden">Показать таблицу</span>
           </a>
         </div>
@@ -291,20 +292,19 @@
     </section>
   </main>
 
-  <section class="newsletter white">
-    <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
-    <p class="newsletter-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-    <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
-      <label for="newsletter-email">Ваш e-mail</label>
-      <input class="field" placeholder="Ваш e-mail" type="email" name="newsletter-email" id="newsletter-email"
-             required>
-      <button class="newsletter-button button blue-button" type="submit">
-        <span class="visually-hidden">Подписаться</span>
-      </button>
-    </form>
-  </section>
-
   <footer class="page-footer">
+    <section class="newsletter white">
+      <h2 class="newsletter-title">Подпишитесь на рассылку</h2>
+      <p class="newsletter-description">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+      <form class="newsletter-form" action="https://echo.htmlacademy.ru/" method="post">
+        <label for="newsletter-email" class="visually-hidden">Ваш e-mail</label>
+        <input class="field-newsletter-email" placeholder="Ваш e-mail" type="email" name="newsletter-email"
+               id="newsletter-email" required>
+        <button class="newsletter-button button blue-button" type="submit">
+          <span>Подписаться</span>
+        </button>
+      </form>
+    </section>
     <section class="footer-contacts">
       <h2 class="visually-hidden">Связаться с нами</h2>
       <ul class="footer-social-list">
