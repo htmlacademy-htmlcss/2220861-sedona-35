@@ -243,9 +243,10 @@ h2 {
 .advantages-list {
   margin: 0;
   padding: 0;
-  display: flex;
+  display: grid;
   list-style: none;
-  flex-wrap: wrap;
+  grid-template-columns: 400px 400px 400px;
+  grid-template-rows: 384px 384px 384px 384px;
 }
 
 .advantages-item {
@@ -257,6 +258,7 @@ h2 {
 
 .advantages-item-picture {
   width: 800px;
+  grid-column: auto / span 2;
 }
 
 .advantages-item-picture img {
