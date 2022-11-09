@@ -639,24 +639,60 @@ h2 {
   border-radius: 4px;
   margin-right: 20px;
   margin-bottom: 20px;
+  display: grid;
+  grid-template-rows: 212px min-content auto min-content;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 16px;
 }
 
 .hotel-card:nth-child(3n) {
   margin-right: 0;
 }
 
+.hotel-card-image-container {
+  grid-column: 1 / -1;
+}
+
+.hotel-card-title-container {
+  grid-column: 1 / -1;
+}
+
 .hotel-card-link {
+  text-decoration: none;
+}
+
+.hotel-card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   color: #000000;
-  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
-.hotel-card-info {
+.hotel-card-info-type,
+.hotel-card-info-price {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+}
+
+.hotel-card-info-price {
+  text-align: end;
+}
+
+.hotel-card-button-fav {
+  text-align: end;
+}
+
+.hotel-card-link-info,
+.hotel-card-favourite-add,
+.hotel-card-favourite-added {
+  width: 140px;
+}
+
+.hotel-card-rating-points-container {
+  text-align: right;
 }
 
 .hotel-card-rating-points {
@@ -665,6 +701,12 @@ h2 {
   text-align: center;
   text-transform: uppercase;
   color: #333333;
+  background: #F2F2F2;
+  border-radius: 4px;
+  width: 140px;
+  padding: 8px;
+  box-sizing: border-box;
+  display: inline-block;
 }
 
 .green-button {
