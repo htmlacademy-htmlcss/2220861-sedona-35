@@ -270,7 +270,9 @@ h2 {
   font-size: 24px;
   line-height: 28px;
   text-align: center;
+  margin: 0 auto;
   text-transform: uppercase;
+  width: 175px;
 }
 
 .advantages-item .advantages-description {
