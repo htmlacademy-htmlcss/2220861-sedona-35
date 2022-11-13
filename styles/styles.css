@@ -298,17 +298,13 @@ h2 {
 
 .advantages-item.light-gray .advantages-title,
 .advantages-item.dark-gray .advantages-title,
-.advantages-item.house .advantages-title,
-.advantages-item.burger .advantages-title,
-.advantages-item.giftbox .advantages-title {
+.advantages-item.with-icon .advantages-title {
   color: #000000;
 }
 
 .advantages-item.light-gray .advantages-description,
 .advantages-item.dark-gray .advantages-description,
-.advantages-item.house .advantages-description,
-.advantages-item.burger .advantages-description,
-.advantages-item.giftbox .advantages-description {
+.advantages-item.with-icon .advantages-description {
   color: #333333;
 }
 
@@ -342,9 +338,30 @@ h2 {
   content: url("../images/icons/advantage-gift.svg");
 }
 
-.advantages-item.giftbox,
-.advantages-item.burger,
-.advantages-item.house {
+.advantages-item:not(.with-icon) .advantages-title {
+  margin-bottom: 60px;
+}
+
+.advantages-item:not(.with-icon) .advantages-title::after {
+  content: '';
+  width: 60px;
+  height: 2px;
+  display: block;
+  margin: 0 auto 30px;
+  position: relative;
+  top: 30px;
+}
+
+.advantages-item.blue .advantages-title::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.advantages-item.light-gray .advantages-title::after,
+.advantages-item.dark-gray .advantages-title::after {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.advantages-item.with-icon {
   padding: 81px 85px;
 }
 
