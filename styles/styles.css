@@ -614,6 +614,7 @@ h2 {
   margin-right: 70px;
   margin-left: auto;
   box-sizing: border-box;
+  padding-left: 20px;
 }
 
 .catalog-results-display-options-buttons {
@@ -735,6 +736,29 @@ h2 {
   padding: 8px;
   box-sizing: border-box;
   display: inline-block;
+}
+
+.hotel-card-stars {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 140px;
+  align-items: center;
+}
+
+.hotel-card-stars li {
+  width: 17px;
+  height: 36px;
+  margin-right: 6px;
+}
+
+.hotel-card-stars li:last-child {
+  margin-right: 0;
+}
+
+.hotel-card-stars li.active {
+  background: url("../images/icons/star.svg") no-repeat 50% 50%;
 }
 
 .green-button {
