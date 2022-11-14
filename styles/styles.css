@@ -494,16 +494,17 @@ h2 {
   display: block;
 }
 
-.button-vk {
-  background: #ffffff url("../images/icons/vk.svg") center center no-repeat;
+.social-icon {
+  fill: #83b3d3;
 }
 
-.button-telegram {
-  background: #ffffff url("../images/icons/telegram.svg") center center no-repeat;
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: #68A2CA;
 }
 
-.button-youtube {
-  background: #ffffff url("../images/icons/youtube.svg") center center no-repeat;
+.social-link:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .footer-contacts-address {
