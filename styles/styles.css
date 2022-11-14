@@ -521,13 +521,32 @@ h2 {
   color: #000000;
 }
 
+.footer-contacts-phone:hover,
+.footer-contacts-phone:focus {
+  color: #756157;
+}
+
+.footer-contacts-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .footer-logo-container {
   width: 115px;
   margin-right: 70px;
 }
 
-.footer-logo-container img {
+.footer-logo-container svg {
   display: block;
+  fill: #000000;
+}
+
+.footer-logo-container:hover svg,
+.footer-logo-container:focus svg {
+  fill: #756157;
+}
+
+.footer-logo-container:active svg {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 /* Catalog specific */
@@ -852,7 +871,7 @@ h2 {
 }
 
 .pagination-item.pagination-link {
-  background: #82B3D3;
+  background: #82b3d3;
 }
 
 .pagination-link-inner {
