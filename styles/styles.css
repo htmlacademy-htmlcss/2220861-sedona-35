@@ -624,6 +624,14 @@ h2 {
   margin-right: 10px;
 }
 
+.breadcrumbs-item a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-item a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .breadcrumbs-item:not(:last-child):after {
   content: url("../images/icons/breadcrumb-arrow.svg");
   display: inline-block;
@@ -707,9 +715,17 @@ h2 {
   display: block;
   min-height: 48px;
   min-width: 48px;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+.catalog-results-display-options-buttons a:hover {
+  border: 2px solid #000000;
+}
+
+.catalog-results-display-options-buttons a:active {
+  border: 2px solid #68a2ca;
 }
 
 .catalog-results-display-options-buttons .button-selected {
@@ -887,7 +903,7 @@ h2 {
   background: #68a2ca;
 }
 
-.pagination-link-inner:active{
+.pagination-link-inner:active {
   color: rgba(255, 255, 255, 0.3);
 }
 
