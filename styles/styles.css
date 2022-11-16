@@ -95,6 +95,7 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  align-items: stretch;
 }
 
 .navigation-link,
@@ -103,13 +104,22 @@ h2 {
   display: block;
 }
 
+.navigation-list li {
+  padding: 20px 16px 0 16px;
+}
+
+.navigation-list a:hover,
+.navigation-current {
+  border-bottom: 2px solid #756257;
+  padding-bottom: 19px;
+}
+
 .navigation-list .navigation-current,
 .navigation-list .navigation-link {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   color: #000000;
-  padding: 20px 16px;
 }
 
 .page-header-user {
@@ -168,14 +178,61 @@ h2 {
   color: #ffffff;
 }
 
+.brown-button:hover,
+.brown-button:focus {
+  background-color: #615048;
+}
+
+.brown-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #756157;
+}
+
 .blue-button {
-  background-color: #82B3D3;
+  background-color: #82b3d3;
   color: #ffffff;
+}
+
+.blue-button:hover,
+.blue-button:focus {
+  background-color: #68a2ca;
+}
+
+.blue-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #82b3d3;
+}
+
+.green-button {
+  color: #ffffff;
+  background: #7db54f;
+}
+
+.green-button:hover,
+.green-button:focus {
+  background-color: #6c9e42;
+}
+
+.green-button:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #7db54f;
 }
 
 .transparent-button {
   color: #ffffff;
   background: none;
+}
+
+.transparent-button:hover {
+  opacity: 0.6;
+}
+
+.transparent-button:focus {
+  border: 3px solid #83b3d3;
+}
+
+.transparent-button:active {
+  border: 3px solid #83b3d3;
 }
 
 .button-search {
@@ -271,9 +328,13 @@ h2 {
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
+  width: 175px;
+  margin: 0 auto 30px;
 }
 
 .advantages-item .advantages-description {
+  margin: 0;
+  padding: 0;
   font-size: 18px;
   line-height: 21px;
   text-align: center;
@@ -294,17 +355,13 @@ h2 {
 
 .advantages-item.light-gray .advantages-title,
 .advantages-item.dark-gray .advantages-title,
-.advantages-item.house .advantages-title,
-.advantages-item.burger .advantages-title,
-.advantages-item.giftbox .advantages-title {
+.advantages-item.with-icon .advantages-title {
   color: #000000;
 }
 
 .advantages-item.light-gray .advantages-description,
 .advantages-item.dark-gray .advantages-description,
-.advantages-item.house .advantages-description,
-.advantages-item.burger .advantages-description,
-.advantages-item.giftbox .advantages-description {
+.advantages-item.with-icon .advantages-description {
   color: #333333;
 }
 
@@ -315,6 +372,7 @@ h2 {
 .advantages-item::before {
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 }
 
 .advantages-item.house::before {
@@ -335,6 +393,33 @@ h2 {
 
 .advantages-item.giftbox::before {
   content: url("../images/icons/advantage-gift.svg");
+}
+
+.advantages-item:not(.with-icon) .advantages-title {
+  margin-bottom: 60px;
+}
+
+.advantages-item:not(.with-icon) .advantages-title::after {
+  content: '';
+  width: 60px;
+  height: 2px;
+  display: block;
+  margin: 0 auto 30px;
+  position: relative;
+  top: 30px;
+}
+
+.advantages-item.blue .advantages-title::after {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.advantages-item.light-gray .advantages-title::after,
+.advantages-item.dark-gray .advantages-title::after {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.advantages-item.with-icon {
+  padding: 81px 85px;
 }
 
 .search {
@@ -409,16 +494,17 @@ h2 {
   display: block;
 }
 
-.button-vk {
-  background: #ffffff url("../images/icons/vk.svg") center center no-repeat;
+.social-icon {
+  fill: #83b3d3;
 }
 
-.button-telegram {
-  background: #ffffff url("../images/icons/telegram.svg") center center no-repeat;
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: #68A2CA;
 }
 
-.button-youtube {
-  background: #ffffff url("../images/icons/youtube.svg") center center no-repeat;
+.social-link:active .social-icon {
+  fill: rgba(104, 162, 202, 0.3);
 }
 
 .footer-contacts-address {
@@ -435,13 +521,32 @@ h2 {
   color: #000000;
 }
 
+.footer-contacts-phone:hover,
+.footer-contacts-phone:focus {
+  color: #756157;
+}
+
+.footer-contacts-phone:active {
+  color: rgba(117, 97, 87, 0.3);
+}
+
 .footer-logo-container {
   width: 115px;
   margin-right: 70px;
 }
 
-.footer-logo-container img {
+.footer-logo-container svg {
   display: block;
+  fill: #000000;
+}
+
+.footer-logo-container:hover svg,
+.footer-logo-container:focus svg {
+  fill: #756157;
+}
+
+.footer-logo-container:active svg {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 /* Catalog specific */
@@ -519,6 +624,14 @@ h2 {
   margin-right: 10px;
 }
 
+.breadcrumbs-item a:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.breadcrumbs-item a:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .breadcrumbs-item:not(:last-child):after {
   content: url("../images/icons/breadcrumb-arrow.svg");
   display: inline-block;
@@ -586,6 +699,7 @@ h2 {
   margin-right: 70px;
   margin-left: auto;
   box-sizing: border-box;
+  padding-left: 20px;
 }
 
 .catalog-results-display-options-buttons {
@@ -601,9 +715,17 @@ h2 {
   display: block;
   min-height: 48px;
   min-width: 48px;
-  border: 2px solid #E5E5E5;
+  border: 2px solid #e5e5e5;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+.catalog-results-display-options-buttons a:hover {
+  border: 2px solid #000000;
+}
+
+.catalog-results-display-options-buttons a:active {
+  border: 2px solid #68a2ca;
 }
 
 .catalog-results-display-options-buttons .button-selected {
@@ -639,24 +761,60 @@ h2 {
   border-radius: 4px;
   margin-right: 20px;
   margin-bottom: 20px;
+  display: grid;
+  grid-template-rows: 212px min-content auto min-content;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 16px;
 }
 
 .hotel-card:nth-child(3n) {
   margin-right: 0;
 }
 
+.hotel-card-image-container {
+  grid-column: 1 / -1;
+}
+
+.hotel-card-title-container {
+  grid-column: 1 / -1;
+}
+
 .hotel-card-link {
+  text-decoration: none;
+}
+
+.hotel-card-title {
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;
   color: #000000;
-  text-decoration: none;
+  margin: 0;
+  padding: 0;
 }
 
-.hotel-card-info {
+.hotel-card-info-type,
+.hotel-card-info-price {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
+}
+
+.hotel-card-info-price {
+  text-align: end;
+}
+
+.hotel-card-button-fav {
+  text-align: end;
+}
+
+.hotel-card-link-info,
+.hotel-card-favourite-add,
+.hotel-card-favourite-added {
+  width: 140px;
+}
+
+.hotel-card-rating-points-container {
+  text-align: right;
 }
 
 .hotel-card-rating-points {
@@ -665,11 +823,35 @@ h2 {
   text-align: center;
   text-transform: uppercase;
   color: #333333;
+  background: #F2F2F2;
+  border-radius: 4px;
+  width: 140px;
+  padding: 8px;
+  box-sizing: border-box;
+  display: inline-block;
 }
 
-.green-button {
-  color: #ffffff;
-  background: #7db54f;
+.hotel-card-stars {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 140px;
+  align-items: center;
+}
+
+.hotel-card-stars li {
+  width: 17px;
+  height: 36px;
+  margin-right: 6px;
+}
+
+.hotel-card-stars li:last-child {
+  margin-right: 0;
+}
+
+.hotel-card-stars li.active {
+  background: url("../images/icons/star.svg") no-repeat 50% 50%;
 }
 
 .pagination {
@@ -683,12 +865,11 @@ h2 {
   width: 60px;
   height: 60px;
   box-sizing: border-box;
-  padding: 11px 0;
+  padding: 0;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
   text-align: center;
-  border-radius: 4px;
   margin-right: 8px;
 }
 
@@ -698,22 +879,36 @@ h2 {
 
 .pagination-item.pagination-current {
   background: #f2f2f2;
+  padding: 11px 0 13px 0;
+  border-radius: 4px;
 }
 
 .pagination-current-inner {
   color: #000000;
 }
 
-.pagination-item.pagination-link {
-  background: #82B3D3;
-}
-
 .pagination-link-inner {
+  margin: 0;
+  display: block;
+  background: #82b3d3;
+  padding: 11px 0 13px 0;
+  width: 100%;
+  border-radius: 4px;
   color: #ffffff;
   text-decoration: none;
 }
 
+.pagination-link-inner:hover,
+.pagination-link-inner:focus {
+  background: #68a2ca;
+}
+
+.pagination-link-inner:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
 .pagination-break {
+  padding: 11px 0 13px 0;
   background: #ffffff;
   color: #000000;
 }
