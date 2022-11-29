@@ -1142,7 +1142,7 @@ h2 {
 
 .popover-close-button:focus {
   background-color: #e6e6e6;
-  border: 3px solid #83b3d3;
+  outline: 3px solid #83b3d3;
 }
 
 .popover-close-button:active {
@@ -1245,19 +1245,21 @@ h2 {
 }
 
 .input-counter.minus {
-  background: #f2f2f2 url("../images/icons/minus.svg") no-repeat 50% 50%;
+  background: #f2f2f2 url("../images/icons/signs-sprites.png") no-repeat -147px -135px;
 }
 
 .input-counter.minus:hover {
-  background-image: url("../images/icons/minus-black.svg");
+  background-image: url("../images/icons/signs-sprites.png");
+  background-position: -12px -6px;
 }
 
 .input-counter.plus {
-  background: #f2f2f2 url("../images/icons/plus.svg") no-repeat 50% 50%;
+  background: #f2f2f2 url("../images/icons/signs-sprites.png") no-repeat -99px -88px;
 }
 
 .input-counter.plus:hover {
-  background-image: url("../images/icons/plus-black.svg");
+  background-image: url("../images/icons/signs-sprites.png");
+  background-position: -55px -44px;
 }
 
 .input-label.children-label {
