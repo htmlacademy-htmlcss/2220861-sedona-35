@@ -35,25 +35,30 @@
       <input type="text" class="search-date" id="checkout-label" name="checkout-date" placeholder="1 сентября 2021">
       <div class="validation">На эти даты есть свободные номера. Пока есть.</div>
     </div>
-    <label class="input-label" for="guest-adult">Взрослые:</label>
+    <label class="input-label guest" for="guest-adult">Взрослые:</label>
     <div class="guest-input-wrapper">
       <button class="input-counter minus"></button>
       <input type="text" class="search-guest" id="guest-adult" name="guest-adult" placeholder="1">
       <button class="input-counter plus"></button>
     </div>
-    <label class="input-label children-label" for="guest-children">Дети:
-      <span class="info">
+
+    <div class="input-info-wrapper">
+      <label class="input-label guest" for="guest-children">Дети:</label>
+      <div class="tooltip">
+        <button class="info" title="инфо"></button>
         <span class="info-content">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-      </span>
-    </label>
+      </div>
+    </div>
     <div class="guest-input-wrapper">
       <button class="input-counter minus"></button>
       <input type="text" class="search-guest" id="guest-children" name="guest-children" placeholder="2">
       <button class="input-counter plus"></button>
     </div>
-    <button class="popover-search-button button blue-button" type="submit">
-      <span>Найти</span>
-    </button>
+    <div class="popover-search-button-container">
+      <button class="popover-search-button button blue-button" type="submit">
+        <span>Найти</span>
+      </button>
+    </div>
   </form>
 </div>
 

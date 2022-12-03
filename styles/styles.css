@@ -1153,7 +1153,7 @@ h2 {
 .search-hotel {
   display: grid;
   grid-template-columns: 135px  110px  219px  111px;
-  grid-template-rows: 73px  73px  73px  60px;
+  grid-template-rows: 73px  73px  48px  85px;
   row-gap: 23px;
 }
 
@@ -1205,6 +1205,11 @@ h2 {
 
 .search-date-wrapper .validation.error {
   color: #ff5757;
+}
+
+.input-label.guest {
+  padding-top: 0;
+  align-self: center;
 }
 
 .guest-input-wrapper {
@@ -1262,16 +1267,21 @@ h2 {
   background-position: -55px -44px;
 }
 
-.input-label.children-label {
+.input-info-wrapper {
   margin-right: 46px;
   justify-content: right;
   display: flex;
   align-items: center;
   padding-top: 0;
-  height: 48px;
+  position: relative;
 }
 
-.input-label .info {
+.tooltip {
+  padding-left: 10px;
+  position: relative;
+}
+
+.tooltip .info {
   border: none;
   border-radius: 50%;
   background: #83b3d3 url("../images/icons/info.png") no-repeat center center;
@@ -1279,28 +1289,29 @@ h2 {
   height: 26px;
   cursor: pointer;
   position: relative;
-  margin-left: 10px;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
 }
 
-/*.input-label .info:hover::after {   real usage */
-.input-label .info::after {
-  content: '';
-  background-image: url("../images/icons/triangle.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
+.tooltip .info:hover::after {
+  content: url("../images/icons/triangle.svg");
   position: absolute;
   width: 19px;
   height: 9px;
-  left: 0;
-  top: 32px;
+  transform: translate(-9px, 10px);
 }
 
-.input-label .info-content {
+.info + .info-content {
+  display: none;
+}
+
+.info:hover + .info-content {
   position: absolute;
   width: 256px;
   height: 143px;
-  left: -128px;
-  top: 41px;
+  left: -110px;
+  top: 37px;
   color: #ffffff;
   font-weight: 400;
   font-size: 16px;
@@ -1314,8 +1325,14 @@ h2 {
   text-align: left;
 }
 
-.popover-search-button {
+.popover-search-button-container {
   grid-column: auto / span 4;
+  align-self: end;
+}
+
+.popover-search-button {
   font-size: 20px;
   line-height: 24px;
+  width: 100%;
+  height: 60px;
 }
