@@ -4,8 +4,21 @@
   <meta charset="utf-8">
   <title>HTML Academy: Седона</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <script type="application/javascript">
+    document.addEventListener('DOMContentLoaded', function () {
+      document.getElementById('search-modal-close-button').addEventListener('click', function () {
+        document.getElementById('search-modal').style.display = 'none';
+      });
+
+      document.getElementById('open-search-button').addEventListener('click', function () {
+        document.getElementById('search-modal').style.display = 'flex';
+      });
+    });
+  </script>
 </head>
+
 <body>
+
 <div class="page-container">
   <header class="page-header">
     <div class="page-header-left">
@@ -111,7 +124,7 @@
       <p class="search-description">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения
         гостиниц в
         Седоне</p>
-      <a class="button-search button brown-button" href="#">Поиск гостиницы в Cедоне</a>
+      <a class="button-search button brown-button" id="open-search-button" href="#">Поиск гостиницы в Cедоне</a>
     </section>
   </main>
 
@@ -173,6 +186,51 @@
       </div>
     </section>
   </footer>
+</div>
+
+<div class="modal-container" id="search-modal">
+  <section class="modal">
+    <h2 class="modal-header">Поиск гостиницы в Седоне</h2>
+    <button class="modal-close-button" id="search-modal-close-button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+    <form name="search-hotel" class="search-hotel" method="get" action="#">
+      <label class="input-label" for="checkin-date">Дата заезда:</label>
+      <div class="search-date-wrapper">
+        <input type="text" class="search-date" id="checkin-date" name="checkin-date" placeholder="27 апреля 2020">
+        <div class="validation error">Мы не можем отправить вас в прошлое.</div>
+      </div>
+      <label class="input-label" for="checkout-label">Дата выезда:</label>
+      <div class="search-date-wrapper">
+        <input type="text" class="search-date" id="checkout-label" name="checkout-date" placeholder="1 сентября 2021">
+        <div class="validation">На эти даты есть свободные номера. Пока есть.</div>
+      </div>
+      <label class="input-label guest" for="guest-adult">Взрослые:</label>
+      <div class="guest-input-wrapper">
+        <button class="input-counter minus"></button>
+        <input type="text" class="search-guest" id="guest-adult" name="guest-adult" placeholder="1">
+        <button class="input-counter plus"></button>
+      </div>
+
+      <div class="input-info-wrapper">
+        <label class="input-label guest" for="guest-children">Дети:</label>
+        <div class="tooltip">
+          <button class="info" title="инфо"></button>
+          <span class="info-content">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+        </div>
+      </div>
+      <div class="guest-input-wrapper">
+        <button class="input-counter minus"></button>
+        <input type="text" class="search-guest" id="guest-children" name="guest-children" placeholder="2">
+        <button class="input-counter plus"></button>
+      </div>
+      <div class="modal-search-button-container">
+        <button class="modal-search-button button blue-button" type="submit">
+          <span>Найти</span>
+        </button>
+      </div>
+    </form>
+  </section>
 </div>
 </body>
 </html>
